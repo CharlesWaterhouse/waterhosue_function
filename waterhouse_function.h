@@ -34,6 +34,8 @@ bool IsPosInt(string str);
 bool IsAllAlphabet(string input_string);
 bool IsFileExist(string input_file_name);
 string IntToString(int input_int);
+template <typename T>
+std::string NumberToString (const T& input_num);
 const wchar_t * StringToWchar_t(const string input_string);
 string Wchar_tToString(const wchar_t * input_wchar_t);
 const wchar_t * CharToWchar_t(const char * input_char);
@@ -262,6 +264,12 @@ string IntToString(int input_int) {
 	ss << input_int;
 	string output_string = ss.str();
 	return output_string;
+}
+template <typename T>
+std::string NumberToString ( const T& input_num ){
+	std::ostringstream ss;
+	ss << input_num;
+	return ss.str();
 }
 const wchar_t * StringToWchar_t(const string input_string) {
 	const wchar_t * output_wchar_t = 0;
