@@ -34,6 +34,9 @@ bool IsPosInt(string str);
 bool IsAllAlphabet(string input_string);
 bool IsFileExist(string input_file_name);
 string IntToString(int input_int);
+int StringToInt(std::string input_s){
+	return stoi(input_s);
+}
 template <typename T>
 std::string NumberToString (const T& input_num);
 const wchar_t * StringToWchar_t(const string input_string);
