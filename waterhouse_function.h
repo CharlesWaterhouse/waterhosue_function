@@ -35,7 +35,7 @@ bool IsAllAlphabet(string input_string);
 bool IsFileExist(string input_file_name);
 string IntToString(int input_int);
 int StringToInt(std::string input_s){
-	return stoi(input_s);
+	return stoi(input_s); //吃到非數字就不安全
 }
 template <typename T>
 std::string NumberToString (const T& input_num);
